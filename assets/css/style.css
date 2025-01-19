@@ -50,6 +50,7 @@
 
   --ff-roboto: "Roboto", sans-serif;
   --ff-poppins: "Poppins", sans-serif;
+  --ff-lucida: "Lucida Handwriting", sans-serif;
 
   --fs-1: 4rem;
   --fs-2: 3.6rem;
@@ -332,7 +333,8 @@ body {
 
 .hero-content { margin-block-end: 50px; }
 
-.hero-title { margin-block: 15px 30px; }
+.hero-title { 
+  margin-block: 15px 30px; }
 
 .hero-text {
   font-size: var(--fs-6);
@@ -376,6 +378,10 @@ body {
 .service-list {
   display: grid;
   gap: 15px;
+}
+
+.service-card-hidden{
+  visibility: hidden;
 }
 
 .service-card {
