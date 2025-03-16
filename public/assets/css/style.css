@@ -23,6 +23,7 @@
   --violet-blue-crayola: hsla(234, 50%, 64%, 1);
   --dark-cornflower-blue_a7: hsla(214, 88%, 27%, 0.07);
   --green-whatsapp: hsla(145, 75%, 60%, 1);
+  --red-whatsapp: hsla(0, 75%, 60%, 1);
   --white: hsla(0, 0%, 100%, 1);
   --white_a3: hsla(0, 0%, 100%, 0.03);
   --white_a8: hsla(0, 0%, 100%, 0.08);
@@ -269,6 +270,13 @@ body.nav-active {
 .btn-whatsapp,
 .btn-outline:is(:hover, :focus-visible) {
   background-color: var(--green-whatsapp);
+  color: var(--charcoal);
+  margin-bottom: 10px;
+}
+
+.btn-alphadocs,
+.btn-outline:is(:hover, :focus-visible) {
+  background-color: var(--white);
   color: var(--charcoal);
 }
 
@@ -627,6 +635,10 @@ body.nav-active {
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
+
+.about-banner img {
+  border-radius: 15px; /* Modifica il valore per ottenere l'arrotondamento desiderato */
+}
 
 .about .container {
   display: grid;
@@ -1037,11 +1049,13 @@ body.nav-active {
 
   .feature-banner {
     order: 1;
+    overflow: hidden;
   }
-
+  
+  .feature-banner img{
+    border-radius: 15px;
+  }
 }
-
-
 
 
 
