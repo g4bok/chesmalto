@@ -28,8 +28,12 @@ const toggleNavbar = function () {
   document.body.classList.toggle("nav-active");
 }
 
-addEventOnElements(navTogglers, "click", toggleNavbar);
-
+navTogglers.forEach(toggler => {
+  toggler.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+});
 
 
 /**

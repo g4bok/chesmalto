@@ -51,7 +51,7 @@
   --fs-4: 1.9rem;
   --fs-5: 1.8rem;
   --fs-6: 1.7rem;
-  --fs-7: 1.5rem;
+  --fs-7: 2rem;
   --fs-8: 1.4rem;
 
   --fw-700: 700;
@@ -221,6 +221,21 @@ body.nav-active {
   background-size: cover;
 }
 
+.h3 {
+  margin-top: 20px; /* Aggiunge spazio sopra il titolo */
+  margin-bottom: 10px; /* Aggiunge spazio sotto il titolo */
+}
+
+.section-text + .h3 {
+  margin-top: 30px; /* Aggiunge più spazio sopra il titolo se preceduto da un paragrafo */
+}
+
+.section-list {
+  margin-top: 10px; /* Aggiunge spazio sopra la lista */
+  margin-bottom: 30px; /* Aggiunge spazio sotto la lista */
+  text-align: left;
+}
+
 .h1,
 .h2,
 .h3,
@@ -315,8 +330,17 @@ body.nav-active {
   width: 100%;
 }
 
+ul.a {
+  list-style-type: circle; /* Mostra i cerchietti */
+  margin-left: 20px; /* Aggiunge spazio a sinistra */
+  padding-left: 20px; /* Aggiunge padding a sinistra */
+}
 
-
+ul.a li, ul.section-list li {
+  list-style-type: disc; /* Mostra i pallini */
+  margin-left: 20px; /* Aggiunge spazio a sinistra */
+  padding-left: 0; /* Rimuove padding extra */
+}
 
 
 /*-----------------------------------*\
@@ -370,8 +394,26 @@ body.nav-active {
   display: block;
 }
 
+@media (max-width: 768px) {
+  .nav-open-btn {
+    display: block;
+  }
+}
+.logo img{
+  width: 100px; /* Imposta la larghezza desiderata */
+  height: auto; /* Mantiene le proporzioni */
+}
+
 .nav-open-btn {
-  font-size: 3.5rem;
+  display: block;
+  position: absolute;
+  top: 3rem;
+  right: 5rem;
+  z-index: 1000;
+  background: none;
+  border: none;
+  font-size: 5rem;
+  cursor: pointer;
   color: var(--white);
 }
 
@@ -388,7 +430,6 @@ body.nav-active {
   max-width: 300px;
   width: 100%;
   height: 100vh;
-  padding: 30px;
   padding-block-end: 40px;
   display: flex;
   flex-direction: column;
@@ -396,6 +437,11 @@ body.nav-active {
   z-index: 2;
   visibility: hidden;
   transition: var(--transition-3);
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
 }
 
 .navbar.active {
@@ -427,12 +473,13 @@ body.nav-active {
 }
 
 .navbar-list {
-  margin-block-end: auto;
+  padding: 0; /* Rimuove il padding interno della lista */
+  margin: 0; /* Rimuove eventuali margini */
 }
 
 .navbar-link {
   font-weight: var(--fw-700);
-  padding-block: 6px;
+  padding: 5px 10px;
 }
 
 .contact-link {
@@ -690,7 +737,11 @@ body.nav-active {
 }
 
 
-
+.section-text {
+  text-align: left; /* Allinea il testo a sinistra */
+  margin-block-start: 50px; /* Aggiungi margine superiore */
+  margin-block-end: 50px;
+}
 
 
 /*-----------------------------------*\
@@ -849,7 +900,7 @@ body.nav-active {
 
 .footer {
   background-color: var(--charcoal);
-  padding-block: 60px 100px;
+  padding: 3rem 0;
   color: var(--light-gray);
 }
 
@@ -1049,6 +1100,7 @@ body.nav-active {
 
   .feature-banner {
     order: 1;
+    border-radius: 15px;
     overflow: hidden;
   }
   
@@ -1119,7 +1171,11 @@ body.nav-active {
     margin-inline-start: 0;
   }
 
+  /**
+   * BLOG
+   */
 
+  
 
   /**
    * HERO
