@@ -1,5 +1,22 @@
 {
   "dependencies": {
     "firebase": "^11.4.0"
-  }
+  },
+  "name": "chesmalto",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g4bok/chesmalto.git"
+  },
+  "author": "Gabriele Murabito",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/g4bok/chesmalto/issues"
+  },
+  "homepage": "https://github.com/g4bok/chesmalto#readme"
 }
