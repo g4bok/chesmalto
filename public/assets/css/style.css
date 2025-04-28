@@ -389,9 +389,12 @@ ul.a li, ul.section-list li {
   display: none;
 }
 
-.header .logo-light,
-.header.active .logo-dark {
+.header .logo-light {
   display: block;
+}
+
+.header.active .logo-dark {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -406,13 +409,12 @@ ul.a li, ul.section-list li {
 
 .nav-open-btn {
   display: block;
-  position: absolute;
   top: 3rem;
   right: 5rem;
   z-index: 1000;
   background: none;
   border: none;
-  font-size: 5rem;
+  font-size: 3rem;
   cursor: pointer;
   color: var(--white);
 }
@@ -899,14 +901,16 @@ ul.a li, ul.section-list li {
   #FOOTER
 \*-----------------------------------*/
 
+
 .footer {
   background-color: var(--charcoal);
   padding: 3rem 0;
   color: var(--light-gray);
+  flex-wrap: wrap;
 }
 
 .footer-brand .footer-text {
-  margin-block: 20px;
+  margin-block: 3rem;
 }
 
 .footer .social-list {
@@ -918,8 +922,12 @@ ul.a li, ul.section-list li {
   margin-block-end: 16px;
 }
 
+.footer-list {
+  flex: 1; /* Permette alla lista di occupare lo spazio disponibile */
+  margin-right: 20px; /* Aggiunge spazio tra la lista e altri elementi */
+}
+
 .footer-link {
-  padding-block: 4px;
   transition: var(--transition-1);
 }
 

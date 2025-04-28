@@ -42,13 +42,20 @@ navTogglers.forEach(toggler => {
  */
 
 const header = document.querySelector("[data-header]");
+let lastScrollY = 0;
 
 window.addEventListener("scroll", function () {
-  if (window.scrollY > 100) {
-    header.classList.add("active");
-  } else {
-    header.classList.remove("active");
+  console.log(this.window.scrollY);
+  if (window.scrollY > 150) {
+    if (window.scrollY > lastScrollY) {
+      // Scrolling down
+      header.classList.add("active");
+    } else {
+      // Scrolling up
+      header.classList.remove("active");
+    }
   }
+  lastScrollY = window.scrollY;
 });
 
 
