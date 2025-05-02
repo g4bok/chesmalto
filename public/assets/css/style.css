@@ -314,6 +314,7 @@ body.nav-active {
 }
 
 .section-subtitle {
+  margin-top: 50px; 
   font-size: var(--fs-7);
   text-transform: uppercase;
   color: var(--violet-blue-crayola);
