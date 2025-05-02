@@ -46,7 +46,7 @@ let lastScrollY = 0;
 
 window.addEventListener("scroll", function () {
   console.log(this.window.scrollY);
-  if (window.scrollY > 150) {
+  if (window.scrollY > 100) {
     if (window.scrollY > lastScrollY) {
       // Scrolling down
       header.classList.add("active");
